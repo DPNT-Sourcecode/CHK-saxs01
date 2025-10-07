@@ -3,5 +3,6 @@ from solutions.HLO.hello_solution import HelloSolution
 
 class TestHloR1():
     def test_sum(self):
-        assert HelloSolution().hello("world") == "Hello, World!"
+        assert HelloSolution().hello("World!") == "Hello, World!"
+
 
