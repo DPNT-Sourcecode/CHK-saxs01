@@ -8,9 +8,15 @@ class CheckoutSolution:
             "D": 15,
         }
 
-        self.offers
+        self.offers = {
+            "A": (3, 130),
+            "B": (2, 45),
+        }
+
+        self.total = 0
 
     # skus = unicode string
-    def checkout(self, skus):
-        raise NotImplementedError()
+    def checkout(self, skus:str) -> int:
+        
+
 
