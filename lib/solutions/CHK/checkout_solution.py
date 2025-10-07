@@ -40,11 +40,3 @@ class CheckoutSolution:
 
         return self.total
 
-
-
-
-
-
-
-
-
