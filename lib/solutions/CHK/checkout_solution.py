@@ -19,6 +19,7 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus) -> int:
+        self.total = 0
         if not isinstance(skus, str):
             return -1
         
@@ -39,5 +40,6 @@ class CheckoutSolution:
 
 
         return self.total
+
 
 
