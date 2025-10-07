@@ -25,7 +25,21 @@ class CheckoutSolution:
         if any(item not in self.prices for item in skus):
             return -1
         
-        return self.prices[skus]
+        counts = Counter(skus)
+
+        total = 0
+        for item, count in counts.items():
+            if item in self.offers:
+                offer_qty, offer_price = self.offers[item]
+                offer_count = count // offer_qty
+                remainder = count % offer_qty
+                total += offer_count * offer_price + remainder * self.prices[item]
+            else:
+                total += count * self.prices[item]
+
+
+        return self.total
+
 
 
 
