@@ -15,11 +15,10 @@ class CheckoutSolution:
             "B": (2, 45),
         }
 
-        self.total = 0
 
     # skus = unicode string
     def checkout(self, skus) -> int:
-        self.total = 0
+        total = 0
         if not isinstance(skus, str):
             return -1
         
@@ -34,12 +33,13 @@ class CheckoutSolution:
 
                 offer_count = count // offer_qty
                 remainder = count % offer_qty
-                self.total += offer_count * offer_price + remainder * self.prices[item]
+                total += offer_count * offer_price + remainder * self.prices[item]
             else:
-                self.total += count * self.prices[item]
+                total += count * self.prices[item]
 
 
-        return self.total
+        return total
+
 
 
 
