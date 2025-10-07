@@ -23,6 +23,8 @@ class CheckoutSolution:
         if any(item not in self.prices for item in skus):
             return -1
         
+        
+
 
 
 

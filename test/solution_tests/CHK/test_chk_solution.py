@@ -8,3 +8,10 @@ class TestSum():
         assert CheckoutSolution().checkout("C") == 20
         assert CheckoutSolution().checkout("D") == 15
 
+    def test_non_string_input(self):
+        assert CheckoutSolution().checkout(20) == -1
+    
+    def test_non_existing_item(self):
+        assert CheckoutSolution().checkout("F") == -1
+
+
