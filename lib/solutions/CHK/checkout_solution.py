@@ -1,3 +1,5 @@
+from collections import Counter
+
 
 class CheckoutSolution:
     def __init__(self):
@@ -23,7 +25,8 @@ class CheckoutSolution:
         if any(item not in self.prices for item in skus):
             return -1
         
-        
+        return self.prices[skus]
+
 
 
 
