@@ -26,7 +26,7 @@ class CheckoutSolution:
             return -1
         
         counts = Counter(skus)
-        print("cpunts: ", counts)
+        
         for item, count in counts.items():
             if item in self.offers:
                 offer_qty, offer_price = self.offers[item]
@@ -39,4 +39,5 @@ class CheckoutSolution:
 
 
         return self.total
+
 
