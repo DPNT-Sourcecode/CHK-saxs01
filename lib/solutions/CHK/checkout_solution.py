@@ -33,12 +33,13 @@ class CheckoutSolution:
 
                 offer_count = count // offer_qty
                 remainder = count % offer_qty
-                total += offer_count * offer_price + remainder * self.prices[item]
+                self.total += offer_count * offer_price + remainder * self.prices[item]
             else:
-                total += count * self.prices[item]
+                self.total += count * self.prices[item]
 
 
         return self.total
+
 
 
 
