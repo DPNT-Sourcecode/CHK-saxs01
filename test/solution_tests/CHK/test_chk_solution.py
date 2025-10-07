@@ -2,5 +2,6 @@ from solutions.CHK.checkout_solution import CheckoutSolution
 
 
 class TestSum():
-    def test_sum(self):
-        assert CheckoutSolution().checkout() == 3
+    def test_single_items(self):
+        skus = "ABCD"
+        assert CheckoutSolution().checkout(skus) == 115
