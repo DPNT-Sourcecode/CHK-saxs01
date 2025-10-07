@@ -20,7 +20,9 @@ class TestSum():
         assert CheckoutSolution().checkout("BBB") == 75
         assert CheckoutSolution().checkout("EEB") == 80
         assert CheckoutSolution().checkout("EEBB") == 110
+        assert CheckoutSolution().checkout("EEBBB") == 125
         assert CheckoutSolution().checkout("AAAAA") == 200
+        assert CheckoutSolution().checkout("AAAAABB") == 245
         assert CheckoutSolution().checkout("AAAAAA") == 250
 
     def test_non_string_input(self):
@@ -32,4 +34,5 @@ class TestSum():
     def test_empty_cart(self):
         assert CheckoutSolution().checkout("") == 0
         assert CheckoutSolution().checkout(None) == 0
+
 

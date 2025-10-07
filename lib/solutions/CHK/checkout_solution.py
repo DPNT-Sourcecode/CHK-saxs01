@@ -14,6 +14,15 @@ class CheckoutSolution:
             "A": (3, 130),
             "B": (2, 45),
         }
+        
+        self.multi_offers = {
+            "A": [(5, 200), (3, 130)],
+            "B": [(2, 45)],
+        }
+
+        self.free_offers = {
+            "E": ("B", 1, 2)
+        }
 
 
     # skus = unicode string
@@ -39,6 +48,7 @@ class CheckoutSolution:
 
 
         return total
+
 
 
 
