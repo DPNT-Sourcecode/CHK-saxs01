@@ -43,10 +43,16 @@ class CheckoutSolution:
         #     else:
         #         total += count * self.prices[item]
 
-        for item, (free_item, free_)
+        for item, (free_item, free_qty, req_qty) in self.free_offers.items():
+            if item in counts:
+                num_qualified_offers = counts[item] // req_qty
+
+                if free_item in counts:
+                    counts[free_item] = max(0, counts[free_item] - num_qualified_offers * free_qty)
 
 
         return total
+
 
 
 
