@@ -30,7 +30,9 @@ class TestSum():
     
     def test_non_existing_item(self):
         assert CheckoutSolution().checkout("F") == -1
+        assert CheckoutSolution().checkout(None) == -1
     
     def test_empty_cart(self):
         assert CheckoutSolution().checkout("") == 0
-        assert CheckoutSolution().checkout(None) == 0
+        
+
