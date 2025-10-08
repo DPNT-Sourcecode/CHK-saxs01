@@ -57,6 +57,7 @@ class CheckoutSolution:
 
             if item in self.multi_offers:
                 offers = self.multi_offers[item]
+                total = self.calculate_best_offer_price(self.prices[item], count, offers)
 
             else:
                 total += count * self.prices[item]
@@ -65,7 +66,7 @@ class CheckoutSolution:
         return total
 
 
-    def calculate_best_offer_price(unit_price, count, offers):
+    def calculate_best_offer_price(self, unit_price, count, offers):
         offer_price = 0
         offers = sorted(offers, key=lambda x: -x[0])
 
@@ -76,6 +77,7 @@ class CheckoutSolution:
 
         offer_price += count * unit_price
         return offer_price
+
 
 
 
