@@ -50,12 +50,11 @@ class CheckoutSolution:
                 if free_item in counts:
                     counts[free_item] = max(0, counts[free_item] - num_qualified_offers * free_qty)
 
-
+        
         return total
 
 
-
-
-
-
+    def calculate_best_offer_price(unit_price, count, offers):
+        offer_
+        offers = sorted(offers, key=lambda x: -x[0])
 

@@ -34,5 +34,3 @@ class TestSum():
     def test_empty_cart(self):
         assert CheckoutSolution().checkout("") == 0
         assert CheckoutSolution().checkout(None) == 0
-
-
