@@ -57,7 +57,7 @@ class CheckoutSolution:
 
             if item in self.multi_offers:
                 offers = self.multi_offers[item]
-                total = self.calculate_best_offer_price(self.prices[item], count, offers)
+                total += self.calculate_best_offer_price(self.prices[item], count, offers)
 
             else:
                 total += count * self.prices[item]
@@ -76,7 +76,8 @@ class CheckoutSolution:
             count %= quantity
 
         curr_total += count * unit_price
-        return best_offer_price
+        return curr_total
+
 
 
 
