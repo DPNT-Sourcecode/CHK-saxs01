@@ -9,9 +9,9 @@ class TestSum():
         assert CheckoutSolution().checkout("D") == 15
         assert CheckoutSolution().checkout("E") == 40
 
-    # def test_checkout_multiple_items(self):
-    #     assert CheckoutSolution().checkout("AB") == 80
-    #     assert CheckoutSolution().checkout("BA") == 80
+    def test_checkout_multiple_items(self):
+        assert CheckoutSolution().checkout("AB") == 80
+        assert CheckoutSolution().checkout("BA") == 80
     
     # def test_checkout_offers(self):
     #     assert CheckoutSolution().checkout("AAA") == 130
@@ -35,5 +35,6 @@ class TestSum():
     def test_empty_cart(self):
         assert CheckoutSolution().checkout("") == 0
         
+
 
 
