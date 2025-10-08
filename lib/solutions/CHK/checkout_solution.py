@@ -32,16 +32,6 @@ class CheckoutSolution:
             return -1
         
         counts = Counter(skus)
-        
-        # for item, count in counts.items():
-        #     if item in self.offers:
-        #         offer_qty, offer_price = self.offers[item]
-
-        #         offer_count = count // offer_qty
-        #         remainder = count % offer_qty
-        #         total += offer_count * offer_price + remainder * self.prices[item]
-        #     else:
-        #         total += count * self.prices[item]
 
         for item, (free_item, free_qty, req_qty) in self.free_offers.items():
             if item in counts:
@@ -61,7 +51,6 @@ class CheckoutSolution:
 
             else:
                 total += count * self.prices[item]
-
         
         return total
 
@@ -77,9 +66,4 @@ class CheckoutSolution:
 
         curr_total += count * unit_price
         return curr_total
-
-
-
-
-
 
