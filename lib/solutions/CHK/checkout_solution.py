@@ -55,6 +55,15 @@ class CheckoutSolution:
 
 
     def calculate_best_offer_price(unit_price, count, offers):
-        offer_
+        offer_price = 0
         offers = sorted(offers, key=lambda x: -x[0])
+
+        for quantity, offer_price in offers:
+            num_offers = count // quantity
+            offer_price += num_offers * offer_price
+            count %= quantity
+
+        offer_price += count * unit_price
+        return offer_price
+
 
